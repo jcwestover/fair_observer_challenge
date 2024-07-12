@@ -15,7 +15,7 @@ Steps to build and/or run the software:
 
 1. **Download or clone the repository**:
 
-- git clone <repository_url>
+- git clone <https://github.com/jcwestover/fair_observer_challenge.git>
 - Alternatively, download the ZIP file and extract it to your desired location. 
 
 Instructions for using the software:
