@@ -1,0 +1,84 @@
+<!-- Author: Jackson Westover -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jackson Westover - Fair Observer Coding Challenge</title>
+    <style>
+
+      /* get rid of outline when selecting textarea */
+      textarea:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      background-color: #c5d6d8;
+    "
+  >
+    <!-- div to hold 2 textarea elements -->
+    <div class="container">
+
+      <!-- first textarea element -->
+      <textarea
+        name="textarea1"
+        id="area1"
+        style="
+          resize: none;
+          width: 500px;
+          height: 500px;
+          font-size: 32px;
+          margin: 0 40px;
+          padding: 20px;
+          border-radius: 15px;
+          border: 15px double #0e0f19;
+          background-color: #60695c;
+          color: #abdf75;
+        "
+      ></textarea>
+
+      <!-- second textarea element -->
+      <textarea
+        name="textarea2"
+        id="area2"
+        style="
+          /* prevents user resizing the textarea field */
+          resize: none;
+          width: 500px;
+          height: 500px;
+          font-size: 32px;
+          margin: 0 40px;
+          padding: 20px;
+          border-radius: 15px;
+          border: 15px double #0e0f19;
+          background-color: #60695c;
+          color: #abdf75;
+        "
+      ></textarea>
+      <script>
+        // a refernces first textarea
+        var a = document.getElementById("area1");
+
+        // b reference second textarea
+        var b = document.getElementById("area2");
+
+        // uses oninput event listener to change area2 value to same value of area1 whenever it is updated
+        a.oninput = function (e) {
+          area2.value = area1.value;
+        };
+
+        // uses oninput event listener to change area1 value to same value of area2 whenever it is updated
+        b.oninput = function (e) {
+          area1.value = area2.value;
+        };
+      </script>
+    </div>
+  </body>
+</html>
